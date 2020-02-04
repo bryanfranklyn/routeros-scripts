@@ -2,6 +2,10 @@
 # Copyright (c) 2019-2020 Christian Hesse <mail@eworm.de>
 # https://git.eworm.de/cgit/routeros-scripts/about/COPYING.md
 
+# TODO: Remove on 2021-09-30
+:global CertificateAvailable
+$CertificateAvailable "Let's Encrypt Authority X3";
+
 # Changes for global-config to be added to notification on script updates
 :global GlobalConfigChanges {
    1="Moved variables from 'global-config' to 'global-functions' for independence";
@@ -34,4 +38,5 @@
   28="Made 'dhcp-to-dns' act on all bound leases, not just dynamic ones.";
   29="Added filter on log message text for 'log-forward'.";
   30="Implemented simple rate limit for 'log-forward' to prevent flooding.";
+  31="Updated Let's Encrypt trust chain";
 };
